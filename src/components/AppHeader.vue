@@ -59,25 +59,26 @@ header{
 
     .navbar {
         @include center('between');
-        padding: 5rem;
+        padding:1rem;
         
         }
     .logo img {
-        height: 60px;
-        margin-left: 6rem; 
+        height: 50px;
+        margin-left: 10rem; 
     }
 
   
     .nav-links {
         @include center();
         list-style: none;
-        padding: 0;
-        margin-right: 4rem;
+        margin-right: 8rem;
     }
 
     li a{
         padding: 1rem;
         text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
         
     }
 }
