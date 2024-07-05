@@ -64,7 +64,7 @@ header{
         }
     .logo img {
         height: 50px;
-        margin-left: 10rem; 
+        margin-left: 9rem; 
     }
 
   
