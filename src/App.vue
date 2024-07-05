@@ -14,7 +14,7 @@ export default{
 </template>
 
 <style lang="scss">
-@use './assets/styles/variables' as*;
+  @use './assets/styles/variables' as*;
   @use './assets/styles/general.scss' as*;
 
   h1,

@@ -6,11 +6,14 @@ export default{
 
 <template>
     <header>
-        <a href="/" class="brand">
-            <img src="../assets/img/dc-logo.png" alt="logo png">
-        </a>
-        <nav>
-            <ul>
+        
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/" class="brand">
+                    <img src="../assets/img/dc-logo.png" alt="logo png">
+                </a>
+            </div>
+            <ul class="nav-links">
                 <li>
                     <a href="#">characters</a>
                 </li>
@@ -47,5 +50,36 @@ export default{
 </template>
 
 <style lang="scss"scoped>
+
+@use '../assets/styles/variables' as*;
+@use '../assets/styles/mixins' as*;
+
+header{
+  
+
+    .navbar {
+        @include center('between');
+        padding: 5rem;
+        
+        }
+    .logo img {
+        height: 60px;
+        margin-left: 6rem; 
+    }
+
+  
+    .nav-links {
+        @include center();
+        list-style: none;
+        padding: 0;
+        margin-right: 4rem;
+    }
+
+    li a{
+        padding: 1rem;
+        text-decoration: none;
+        
+    }
+}
 
 </style>
