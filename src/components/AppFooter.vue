@@ -82,12 +82,8 @@ export default{
 
 // footer
     footer {
-        background-color:#303030;
+        
         background: url('../assets/img/footer-bg.jpg') no-repeat center center/cover;
-        color: white;
-        padding: 20px 0;
-        position: relative;
-
 
     .footer-top {
         display: flex;
