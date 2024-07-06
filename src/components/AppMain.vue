@@ -23,7 +23,7 @@ export default{
     display: flex;
     justify-content: start;
     align-items: center;
-    height: calc(100vh - 300px); 
+    height: 150px; 
     background-color: black;
    
 

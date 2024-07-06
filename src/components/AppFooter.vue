@@ -92,8 +92,7 @@ export default{
     }
 
     .footer-content{
-        background: url(),url('../assets/img/dc-logo-bg.png') no-repeat 90% center/contain;
-      
+        background: url(),url('../assets/img/dc-logo-bg.png') no-repeat 90% center /contain;
     }
 
     .footer-column {

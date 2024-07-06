@@ -9,7 +9,6 @@ export default{
 
 <template>
     <header>
-        
         <nav class="navbar">
             <div class="logo">
                 <a href="/" class="brand">
