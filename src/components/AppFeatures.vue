@@ -2,36 +2,36 @@
 export default{
     name:'AppFeatures',
     data() {
-    return {
-      featuresData: [
-        {
-          imgSrc: "/public/img/buy-comics-digital-comics.png",
-          imgAlt: "Digital Comics",
-          text: "DIGITAL COMICS"
-        },
-        {
-          imgSrc: "/public/img/buy-comics-merchandise.png",
-          imgAlt: "DC Merchandise",
-          text: "DC MERCHANDISE"
-        },
-        {
-          imgSrc: "/public/img/buy-comics-shop-locator.png",
-          imgAlt: "Subscription",
-          text: "SUBSCRIPTION"
-        },
-        {
-          imgSrc: "/public/img/buy-comics-shop-locator.png",
-          imgAlt: "Comic Shop Locator",
-          text: "COMIC SHOP LOCATOR"
-        },
-        {
-          imgSrc: "/public/img/buy-dc-power-visa.svg",
-          imgAlt: "DC Power Visa",
-          text: "DC POWER VISA"
-        }
-      ]
-    };
-  }
+        return {
+        featuresData: [
+            {
+            imgSrc: "/public/img/buy-comics-digital-comics.png",
+            imgAlt: "Digital Comics",
+            text: "DIGITAL COMICS"
+            },
+            {
+            imgSrc: "/public/img/buy-comics-merchandise.png",
+            imgAlt: "DC Merchandise",
+            text: "DC MERCHANDISE"
+            },
+            {
+            imgSrc: "/public/img/buy-comics-shop-locator.png",
+            imgAlt: "Subscription",
+            text: "SUBSCRIPTION"
+            },
+            {
+            imgSrc: "/public/img/buy-comics-shop-locator.png",
+            imgAlt: "Comic Shop Locator",
+            text: "COMIC SHOP LOCATOR"
+            },
+            {
+            imgSrc: "/public/img/buy-dc-power-visa.svg",
+            imgAlt: "DC Power Visa",
+            text: "DC POWER VISA"
+            }
+        ]
+        };
+    }
 };
 
 </script>

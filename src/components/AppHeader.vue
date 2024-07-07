@@ -1,10 +1,24 @@
 <script>
 export default{
     name:'AppHeader',
-    data(){
-        return
+    data() {
+        return {
+        navLinksData: [
+            { href: "#", text: "characters" },
+            { href: "#", text: "comics" },
+            { href: "#", text: "movies" },
+            { href: "#", text: "tv" },
+            { href: "#", text: "games" },
+            { href: "#", text: "collectibles" },
+            { href: "#", text: "videos" },
+            { href: "#", text: "fans" },
+            { href: "#", text: "news" },
+            { href: "#", text: "shop" }
+        ]
+        };
     }
-}
+};
+
 </script>
 
 <template>
@@ -16,7 +30,11 @@ export default{
                 </a>
             </div>
             <ul class="nav-links">
-                <li>
+                <li v-for="link in navLinksData" :key="link.text">
+                    <a :href="link.href">{{ link.text }}</a>
+                </li>
+            </ul>
+                <!-- <li>
                     <a href="#">characters</a>
                 </li>
                 <li>
@@ -46,7 +64,7 @@ export default{
                 <li>
                     <a href="#">shop</a>
                 </li>
-            </ul>
+            </ul> -->
         </nav>
     </header>
 </template>
