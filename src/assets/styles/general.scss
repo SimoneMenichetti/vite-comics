@@ -19,3 +19,39 @@ a {
     padding: 0 1rem;
 
 }
+
+
+
+// <footer class="footer">
+// <div class="footer-content">
+//     <div class="footer-top">
+//         <div v-for="(column, index) in footerColumns" :key="index" class=" footer-column dc-comics-shop" >
+//             <div class="footer-section">
+//                 <h3>{{ column.title }}</h3>
+//                 <ul>
+//                     <!-- Iterazione sugli elementi links di ciascuna colonna -->
+//                     <li v-for="(link, linkIndex) in column.links" :key="linkIndex">
+//                         <a :href="link.href">{{ link.text }}</a>
+//                     </li>
+//                 </ul>
+//             </div>
+//         </div>
+//     </div>
+
+//     <div class="footer-bottom">
+//         <div class="footer-middle">
+//             <button class="signup-button">SIGN-UP NOW!</button>
+//         </div>
+//         <div class="social-icons">
+//         <div class="followus">
+//             <p>FOLLOW US</p>
+//         </div>
+//             <!-- Iterazione sugli elementi socialIcons -->
+//             <a v-for="(icon, iconIndex) in socialIcons" :key="iconIndex" :href="icon.href">
+//                 <img :src="icon.src" :alt="icon.alt">
+//             </a>
+//         </div>
+//     </div>
+// </div>
+// </footer>
+// </template>

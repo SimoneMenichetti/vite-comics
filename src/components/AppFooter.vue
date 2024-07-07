@@ -1,79 +1,111 @@
 <script>
 export default{
     name:'AppFooter',
+    data() {
+        return {
+            footerSections: [
+                {
+                    title: 'DC COMICS',
+                    items: [
+                        { label: 'Characters', url: '#' },
+                        { label: 'Comics', url: '#' },
+                        { label: 'Movies', url: '#' },
+                        { label: 'TV', url: '#' },
+                        { label: 'Games', url: '#' },
+                        { label: 'Videos', url: '#' },
+                        { label: 'News', url: '#' }
+                    ]
+                },
+                {
+                    title: 'SHOP',
+                    items: [
+                        { label: 'Shop DC', url: '#' },
+                        { label: 'Shop DC Collectibles', url: '#' }
+                    ]
+                },
+                {
+                    title: 'DC',
+                    items: [
+                        { label: 'Terms Of Use', url: '#' },
+                        { label: 'Privacy policy (New)', url: '#' },
+                        { label: 'Ad Choices', url: '#' },
+                        { label: 'Advertising', url: '#' },
+                        { label: 'Jobs', url: '#' },
+                        { label: 'Subscriptions', url: '#' },
+                        { label: 'Talent Workshops', url: '#' },
+                        { label: 'CPSC Certificates', url: '#' },
+                        { label: 'Ratings', url: '#' },
+                        { label: 'Shop Help', url: '#' },
+                        { label: 'Contact Us', url: '#' }
+                    ]
+                },
+                {
+                    title: 'SITES',
+                    items: [
+                        { label: 'DC', url: '#' },
+                        { label: 'MAD Magazine', url: '#' },
+                        { label: 'DC Kids', url: '#' },
+                        { label: 'DC Universe', url: '#' },
+                        { label: 'DC Power Visa', url: '#' }
+                    ]
+                }
+            ],
+            socialIcons: [
+                { image: '../assets/img/footer-facebook.png', alt: 'Facebook', url: '#' },
+                { image: '../assets/img/footer-twitter.png', alt: 'Twitter', url: '#' },
+                { image: '../assets/img/footer-youtube.png', alt: 'YouTube', url: '#' },
+                { image: '../assets/img/footer-pinterest.png', alt: 'Pinterest', url: '#' },
+                { image: '../assets/img/footer-periscope.png', alt: 'Periscope', url: '#' }
+            ]
+        }
+    }
 }
+// dc-comics-shop
 </script>
 <template>
-         <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-top">
-                    <div class="footer-column dc-comics-shop">
-                        <div class="footer-section">
-                            <h3>DC COMICS</h3>
-                            <ul>
-                                <li><a href="#">Characters</a></li>
-                                <li><a href="#">Comics</a></li>
-                                <li><a href="#">Movies</a></li>
-                                <li><a href="#">TV</a></li>
-                                <li><a href="#">Games</a></li>
-                                <li><a href="#">Videos</a></li>
-                                <li><a href="#">News</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-section">
-                            <h3>SHOP</h3>
-                            <ul>
-                                <li><a href="#">Shop DC</a></li>
-                                <li><a href="#">Shop DC Collectibles</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-column">
-                        <h3>DC</h3>
+   <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <!-- Colonna DC COMICS -->
+                <div class="footer-column dc-comics-shop">
+                    <div class="footer-section">
+                        <h3>{{ footerSections[0].title }}</h3>
                         <ul>
-                            <li><a href="#">Terms Of Use</a></li>
-                            <li><a href="#">Privacy policy (New)</a></li>
-                            <li><a href="#">Ad Choices</a></li>
-                            <li><a href="#">Advertising</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a href="#">Subscriptions</a></li>
-                            <li><a href="#">Talent Workshops</a></li>
-                            <li><a href="#">CPSC Certificates</a></li>
-                            <li><a href="#">Ratings</a></li>
-                            <li><a href="#">Shop Help</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li v-for="(item, i) in footerSections[0].items" :key="i"><a :href="item.url">{{ item.label }}</a></li>
                         </ul>
                     </div>
-                    <div class="footer-column">
-                        <h3>SITES</h3>
+                    <!-- Aggiunta della sezione SHOP sotto DC COMICS -->
+                    <div class="footer-section">
+                        <h3>{{ footerSections[1].title }}</h3>
                         <ul>
-                            <li><a href="#">DC</a></li>
-                            <li><a href="#">MAD Magazine</a></li>
-                            <li><a href="#">DC Kids</a></li>
-                            <li><a href="#">DC Universe</a></li>
-                            <li><a href="#">DC Power Visa</a></li>
+                            <li v-for="(item, i) in footerSections[1].items" :key="i"><a :href="item.url">{{ item.label }}</a></li>
                         </ul>
                     </div>
                 </div>
-                
-                <div class="footer-bottom">
-                    <div class="footer-middle">
-                        <button class="signup-button">SIGN-UP NOW!</button>
-                    </div>
-                    <div class="social-icons">
-                        <div class="followus">
-                            <p>FOLLOW US</p>
-                        </div>
-                            <a href="#"><img src="../assets/img/footer-facebook.png" alt="Facebook"></a>
-                            <a href="#"><img src="../assets/img/footer-twitter.png" alt="Twitter"></a>
-                            <a href="#"><img src="../assets/img/footer-youtube.png" alt="YouTube"></a>
-                            <a href="#"><img src="../assets/img/footer-pinterest.png" alt="Pinterest"></a>
-                            <a href="#"><img src="../assets/img/footer-periscope.png" alt="Periscope"></a>
-                        </div>
-                    </div>
+
+                <!-- Altre colonne -->
+                <div class="footer-column" v-for="(section, index) in footerSections.slice(2)" :key="index">
+                    <h3>{{ section.title }}</h3>
+                    <ul>
+                        <li v-for="(item, i) in section.items" :key="i"><a :href="item.url">{{ item.label }}</a></li>
+                    </ul>
                 </div>
-            
-        </footer>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <div class="footer-middle">
+                    <button class="signup-button">SIGN-UP NOW!</button>
+                </div>
+                <div class="social-icons">
+                    <div class="followus">
+                        <p>FOLLOW US</p>
+                    </div>
+                    <a v-for="(icon, i) in socialIcons" :key="i" :href="icon.url"><img :src="icon.image" :alt="icon.alt"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </template>
 
 <style lang="scss"scoped>
