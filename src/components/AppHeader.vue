@@ -3,20 +3,32 @@ export default{
     name:'AppHeader',
     data() {
         return {
-        navLinksData: [
-            { href: "#", text: "characters" },
-            { href: "#", text: "comics" },
-            { href: "#", text: "movies" },
-            { href: "#", text: "tv" },
-            { href: "#", text: "games" },
-            { href: "#", text: "collectibles" },
-            { href: "#", text: "videos" },
-            { href: "#", text: "fans" },
-            { href: "#", text: "news" },
-            { href: "#", text: "shop" }
-        ]
+            activeLink: '',
+            logo: {
+            href: "/",
+            src: "/public/img/dc-logo.png" ,
+            alt: "logo png"
+            },
+            navLinksData: [
+                { href: "#", text: "characters" },
+                { href: "#", text: "comics" },
+                { href: "#", text: "movies" },
+                { href: "#", text: "tv" },
+                { href: "#", text: "games" },
+                { href: "#", text: "collectibles" },
+                { href: "#", text: "videos" },
+                { href: "#", text: "fans" },
+                { href: "#", text: "news" },
+                { href: "#", text: "shop" }
+            ]
         };
+    },
+
+    methods: {
+    setActiveLink(linkText) {
+      this.activeLink = linkText;
     }
+  }
 };
 
 </script>
@@ -25,13 +37,19 @@ export default{
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="/" class="brand">
-                    <img src="../assets/img/dc-logo.png" alt="logo png">
+                <a :href="logo.href" class="brand">
+                    <img :src="logo.src" :alt="logo.alt">
                 </a>
             </div>
             <ul class="nav-links">
                 <li v-for="link in navLinksData" :key="link.text">
-                    <a :href="link.href">{{ link.text }}</a>
+                    <a
+                      :href="link.href"
+                      :class="{ active: link.text === activeLink }"
+                      @click="setActiveLink(link.text)"
+                    >
+                      {{ link.text }}
+                    </a>
                 </li>
             </ul>
                 <!-- <li>
@@ -75,7 +93,6 @@ export default{
 @use '../assets/styles/mixins' as*;
 
 header{
-  
 
     .navbar {
         @include center('between');
@@ -94,12 +111,36 @@ header{
         margin-right: 8rem;
     }
 
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        position: relative;
+        padding-bottom: 5px;
+    }
+
     li a{
         padding: 1rem;
         text-decoration: none;
         font-size: 14px;
         font-weight: bold;
         
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color:#0282F9;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+    content: "";
+        position: absolute;
+        width: 60%;
+        height: 2px;
+        background-color: #0282F9;
+        bottom: -82%;
+        left: 20%;
     }
 }
 
