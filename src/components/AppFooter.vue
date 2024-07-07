@@ -51,16 +51,17 @@ export default{
                 }
             ],
             socialIcons: [
-                { image: '../assets/img/footer-facebook.png', alt: 'Facebook', url: '#' },
-                { image: '../assets/img/footer-twitter.png', alt: 'Twitter', url: '#' },
-                { image: '../assets/img/footer-youtube.png', alt: 'YouTube', url: '#' },
-                { image: '../assets/img/footer-pinterest.png', alt: 'Pinterest', url: '#' },
-                { image: '../assets/img/footer-periscope.png', alt: 'Periscope', url: '#' }
+                { image: '/public/img/footer-facebook.png', alt: 'Facebook', url: '#' },
+                { image: '/public/img/footer-twitter.png', alt: 'Twitter', url: '#' },
+                { image: '/public/img/footer-youtube.png', alt: 'YouTube', url: '#' },
+                { image: '/public/img/footer-pinterest.png', alt: 'Pinterest', url: '#' },
+                { image: '/public/img/footer-periscope.png', alt: 'Periscope', url: '#' }
             ]
         }
     }
 }
 // dc-comics-shop
+
 </script>
 <template>
    <footer class="footer">
@@ -115,7 +116,7 @@ export default{
 // footer
     footer {
         
-        background: url('../assets/img/footer-bg.jpg') no-repeat center center/cover;
+        background: url('/public/img/footer-bg.jpg') no-repeat center center/cover;
 
     .footer-top {
         display: flex;
@@ -124,7 +125,7 @@ export default{
     }
 
     .footer-content{
-        background: url(),url('../assets/img/dc-logo-bg.png') no-repeat 90% center /contain;
+        background: url(),url('/public/img/dc-logo-bg.png') no-repeat 90% center /contain;
     }
 
     .footer-column {
@@ -157,6 +158,7 @@ export default{
         color: #959595;
         text-decoration: none;
         transition: color 0.3s;
+        
     }
 
     .footer-column ul li a:hover {

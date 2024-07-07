@@ -76,6 +76,7 @@ export default{
     align-items: center;
     background-color:#0282F9;
     padding: 30px 140px;
+    cursor: pointer;
 
 
     .feature {

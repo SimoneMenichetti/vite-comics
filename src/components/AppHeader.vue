@@ -10,16 +10,16 @@ export default{
             alt: "logo png"
             },
             navLinksData: [
-                { href: "#", text: "characters" },
-                { href: "#", text: "comics" },
-                { href: "#", text: "movies" },
-                { href: "#", text: "tv" },
-                { href: "#", text: "games" },
-                { href: "#", text: "collectibles" },
-                { href: "#", text: "videos" },
-                { href: "#", text: "fans" },
-                { href: "#", text: "news" },
-                { href: "#", text: "shop" }
+                { href: "#", text: "CHARACTERS" },
+                { href: "#", text: "COMICS" },
+                { href: "#", text: "MOVIES" },
+                { href: "#", text: "TV" },
+                { href: "#", text: "GAMES" },
+                { href: "#", text: "COLLECTIBLES" },
+                { href: "#", text: "VIDEOS" },
+                { href: "#", text: "FANS" },
+                { href: "#", text: "NEWS" },
+                { href: "#", text: "SHOP" }
             ]
         };
     },
@@ -122,7 +122,7 @@ header{
     li a{
         padding: 1rem;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 10px;
         font-weight: bold;
         
     }
@@ -139,7 +139,7 @@ header{
         width: 60%;
         height: 2px;
         background-color: #0282F9;
-        bottom: -82%;
+        bottom: -96%;
         left: 20%;
     }
 }

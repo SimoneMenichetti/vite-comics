@@ -31,6 +31,7 @@ export default{
         text-align: center;
         font-size: 16px;
         margin-left: 10rem;
+        cursor: pointer;
     }
 }
 
