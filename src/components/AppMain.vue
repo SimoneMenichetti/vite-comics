@@ -92,6 +92,9 @@ export default{
             <AppCard v-for="(card,i) in cards" :key="i"
             :details="card"/>
         </div>
+        <div class="box button">
+                <button class="loadmore-button">LOAD MORE</button>
+            </div>
             <!-- <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="Action comics">
             <p>ACTION COMICS</p>
         </div>
@@ -158,6 +161,27 @@ main{
         height: 450px;
         gap: 20px;
         padding: 20px;
+    }
+
+     // generali bottone
+
+     .box {
+        text-align: center;
+
+     }
+     .loadmore-button {
+        background-color:  #0282F9;
+        color: white;
+        padding: 10px 50px;
+        margin-bottom: 2rem;
+        border: solid 1px #0282F9;
+        font-size: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .loadmore-button:hover {
+        background-color: #0c5a99;
     }
 
 }
