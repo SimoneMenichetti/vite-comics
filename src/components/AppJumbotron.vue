@@ -23,8 +23,7 @@ export default{
 <style lang="scss" scoped>
 @use '../assets/styles/variables';
 .jumboHeroes {
-    background-image: url('/public/img/jumbotron.jpg'); /* Assicurati che l'immagine sia nella stessa directory del file CSS */
-    background-size: cover;
-    height: 300px; /* Regola l'altezza secondo le tue necessità */
+    background-image: url('/public/img/jumbotron.jpg'); 
+    height: 300px; 
 }
 </style>
