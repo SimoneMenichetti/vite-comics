@@ -20,13 +20,12 @@ export default{
         </a> -->
     </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss"scoped>
 @use '../assets/styles/variables';
 .jumboHeroes {
+    position: relative;
     background-image: url('/public/img/jumbotron.jpg'); 
     height: 300px; 
     background-size: cover;
-   
-    
 }
 </style>

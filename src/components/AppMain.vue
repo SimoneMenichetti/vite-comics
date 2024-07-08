@@ -88,13 +88,16 @@ export default{
 
 <template>
     <main>
+        <div class="buttoncurrent">
+            <button class="currentseries-button"><b>CURRENT SERIES</b></button>
+        </div>
         <div class="container">
             <AppCard v-for="(card,i) in cards" :key="i"
             :details="card"/>
         </div>
-        <div class="box button">
-                <button class="loadmore-button">LOAD MORE</button>
-            </div>
+        <div class="box buttonload">
+            <button class="loadmore-button">LOAD MORE</button>
+        </div>
             <!-- <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="Action comics">
             <p>ACTION COMICS</p>
         </div>
@@ -169,7 +172,7 @@ main{
         text-align: center;
 
      }
-     .loadmore-button {
+     .loadmore-button, .currentseries-button {
         background-color:  #0282F9;
         color: white;
         padding: 10px 50px;
@@ -182,6 +185,14 @@ main{
 
     .loadmore-button:hover {
         background-color: #0c5a99;
+    }
+    .buttoncurrent .currentseries-button{
+        position: absolute;
+        margin-top: -20px;
+        margin-left: 130px;
+        padding: 10px 20px;
+        font-size: 13px;
+        font-weight: bolder;
     }
 
 }
