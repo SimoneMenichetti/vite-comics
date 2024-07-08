@@ -1,9 +1,13 @@
 <script>
+import AppCard from './AppCard.vue';
 export default{
     name:'AppMain',
+    components: {
+        AppCard,
+    },
     data(){
         return{
-            Cards:[
+            cards:[
             {
                 "thumb": "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
                 "price": "$19.99",
@@ -85,8 +89,10 @@ export default{
 <template>
     <main>
         <div class="container">
-        <div class="card">
-            <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="Action comics">
+            <AppCard v-for="(card,i) in cards" :key="i"
+            :details="card"/>
+        </div>
+            <!-- <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="Action comics">
             <p>ACTION COMICS</p>
         </div>
         <div class="card">
@@ -133,7 +139,7 @@ export default{
             <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="CatWoman vol 2">
             <P>CATWOMAN</P>
         </div>
-    </div>
+    </div> -->
     </main>
 </template>
 
@@ -154,37 +160,6 @@ main{
         padding: 20px;
     }
 
-    .card {
-        width: 150px;
-        height: 150px;
-        padding-bottom: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        font-size: 18px;
-        color: #333333;
-
-        p{
-            font-size: 10px;
-            color: #fff;
-            text-align: left;
-            margin-top:10px;
-        }
-    }
-
-    .card img{
-      
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: block;
-        cursor: pointer;
-     
-    }
-
-    .card img:hover {
-        box-shadow: 0 4px 8px rgba(1, 81, 172, 0.8);
-    }
 }
 
 </style>
