@@ -183,7 +183,7 @@ main{
         transition: background-color 0.3s;
     }
 
-    .loadmore-button:hover {
+   button:hover {
         background-color: #0c5a99;
     }
     .buttoncurrent .currentseries-button{
