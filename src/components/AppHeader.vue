@@ -9,6 +9,7 @@ export default{
             src: "/public/img/dc-logo.png" ,
             alt: "logo png"
             },
+
             navLinksData: [
                 { href: "#", text: "CHARACTERS" },
                 { href: "#", text: "COMICS" },
