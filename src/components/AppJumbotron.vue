@@ -25,5 +25,8 @@ export default{
 .jumboHeroes {
     background-image: url('/public/img/jumbotron.jpg'); 
     height: 300px; 
+    background-size: cover;
+   
+    
 }
 </style>
