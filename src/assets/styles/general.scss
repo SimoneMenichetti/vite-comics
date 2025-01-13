@@ -1,23 +1,166 @@
+/* Reset styles */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+   
 }
-
-
 
 img {
-    max-width: 100%;
+    max-width: 100%;  /* Assicura che le immagini non escano dal contenitore */
 }
 
+/* Link default */
 a {
     color: black;
+    text-decoration: none;
 }
 
-// layout
+/* Layout */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+}
 
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Card layout for smaller screens */
+    .card {
+        width: 100%;
+        max-width: 320px; /* Max width for cards */
+        margin: 0 auto;   /* Centra la card */
+    }
+
+    /* Navbar adjustments if you have it */
+    .navbar {
+        align-items: center;
+    }
+
+  
+
+    /* AppFeatures adjustments */
+    .features {
+        padding: 20px 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feature {
+        width: 100%; /* Ogni feature occupa tutta la larghezza */
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px; /* Spaziatura tra le features */
+    }
+
+    .feature img {
+        width: 40px; /* Aumenta le dimensioni dell'immagine per schermi piccoli */
+        height: 40px;
+    }
+
+    /* Footer adjustments */
+    .footer-top {
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;  
+        margin-bottom: 20px; 
+    }
+
+    .footer-column h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .footer-column ul {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        align-items: center;
+    }
+
+    .signup-button {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .social-icons a {
+        margin: 5px 0; 
+    }
+}
+
+/* Media query for screens 400px and smaller (e.g., very small smartphones) */
+@media (max-width: 400px) {
+
+    /* Container */
+    .container {
+        padding: 0 0.5rem; 
+    }
+
+    /* AppFeatures adjustments */
+    .features {
+        padding: 15px 5px; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feature {
+        width: 100%;  
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 15px; /* Spaziatura tra le features */
+    }
+
+    .feature img {
+        width: 35px;  
+        height: 35px;
+    }
+
+    /* Footer adjustments */
+    .footer-column h3 {
+        font-size: 14px;  
+    }
+
+    .footer-column ul {
+        font-size: 10px;  
+    }
+
+    .footer-bottom {
+        align-items: center;
+        padding: 10px;
+    }
+
+    .signup-button {
+        width: 100%; 
+        font-size: 12px;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        flex-direction: row; 
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        margin: 0 8px; 
+    }
 }

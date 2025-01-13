@@ -21,6 +21,11 @@
         align-items: center;
     }
 
+    @else if $type=='around' {
+        justify-content: space-around;
+        align-items: center;
+    }
+
     @else if $type=='end' {
         justify-content: flex-end;
         align-items: center;

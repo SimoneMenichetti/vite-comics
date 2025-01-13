@@ -149,31 +149,35 @@ export default{
     </main>
 </template>
 
-<style lang="scss"scoped>
+<style lang="scss" scoped>
 @use '../assets/styles/variables';
 @use '../assets/styles/general.scss';
 
-
-// sezione MAIN
-main{
+main {
     background-color: #1C1C1C;
+
     .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        height: 450px;
         gap: 20px;
         padding: 20px;
     }
 
-     // generali bottone
-
-     .box {
+    .card {
+        width: 150px;
+        height: 150px;
+        padding-bottom: 20px;
+        margin-top: 2rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
+        font-size: 18px;
+        color: #333333;
+    }
 
-     }
-     .loadmore-button, .currentseries-button {
-        background-color:  #0282F9;
+    .loadmore-button,
+    .currentseries-button {
+        background-color: #0282F9;
         color: white;
         padding: 10px 50px;
         margin-bottom: 2rem;
@@ -183,10 +187,11 @@ main{
         transition: background-color 0.3s;
     }
 
-   button:hover {
+    button:hover {
         background-color: #0c5a99;
     }
-    .buttoncurrent .currentseries-button{
+
+    .buttoncurrent .currentseries-button {
         position: absolute;
         margin-top: -20px;
         margin-left: 130px;
@@ -195,6 +200,44 @@ main{
         font-weight: bolder;
     }
 
-}
+    /* Centering the Load More button */
+    .box {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
 
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .loadmore-button,
+        .currentseries-button {
+            width: 35%;
+            font-size: 14px;
+            padding: 15px;
+        }
+
+        .buttoncurrent .currentseries-button {
+            margin-left: 10px;
+        }
+    }
+
+    /* For mobile (e.g., 400px) */
+    @media (max-width: 400px) {
+        .container {
+            grid-template-columns: 1fr;  // Stack items in a single column for very small screens
+        }
+
+        .buttoncurrent .currentseries-button {
+            margin-left: 10px;  // Adjust position for smaller screens
+        }
+    }
+}
 </style>

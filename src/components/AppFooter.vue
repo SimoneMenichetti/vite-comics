@@ -1,6 +1,7 @@
+
 <script>
-export default{
-    name:'AppFooter',
+export default {
+    name: 'AppFooter',
     data() {
         return {
             footerSections: [
@@ -51,23 +52,21 @@ export default{
                 }
             ],
             socialIcons: [
-                { image: '/public/img/footer-facebook.png', alt: 'Facebook', url: '#' },
-                { image: '/public/img/footer-twitter.png', alt: 'Twitter', url: '#' },
-                { image: '/public/img/footer-youtube.png', alt: 'YouTube', url: '#' },
-                { image: '/public/img/footer-pinterest.png', alt: 'Pinterest', url: '#' },
-                { image: '/public/img/footer-periscope.png', alt: 'Periscope', url: '#' }
+                { image: '/img/footer-facebook.png', alt: 'Facebook', url: '#' },
+                { image: '/img/footer-twitter.png', alt: 'Twitter', url: '#' },
+                { image: '/img/footer-youtube.png', alt: 'YouTube', url: '#' },
+                { image: '/img/footer-pinterest.png', alt: 'Pinterest', url: '#' },
+                { image: '/img/footer-periscope.png', alt: 'Periscope', url: '#' }
             ]
-        }
+        };
     }
-}
-// dc-comics-shop
-
+};
 </script>
+
 <template>
-   <footer class="footer">
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-top">
-                <!-- Colonna DC COMICS -->
                 <div class="footer-column dc-comics-shop">
                     <div class="footer-section">
                         <h3>{{ footerSections[0].title }}</h3>
@@ -75,7 +74,6 @@ export default{
                             <li v-for="(item, i) in footerSections[0].items" :key="i"><a :href="item.url">{{ item.label }}</a></li>
                         </ul>
                     </div>
-                    <!-- Aggiunta della sezione SHOP sotto DC COMICS -->
                     <div class="footer-section">
                         <h3>{{ footerSections[1].title }}</h3>
                         <ul>
@@ -83,8 +81,6 @@ export default{
                         </ul>
                     </div>
                 </div>
-
-                <!-- Altre colonne -->
                 <div class="footer-column" v-for="(section, index) in footerSections.slice(2)" :key="index">
                     <h3>{{ section.title }}</h3>
                     <ul>
@@ -92,8 +88,6 @@ export default{
                     </ul>
                 </div>
             </div>
-
-            <!-- Footer bottom -->
             <div class="footer-bottom">
                 <div class="footer-middle">
                     <button class="signup-button">SIGN-UP NOW!</button>
@@ -109,48 +103,44 @@ export default{
     </footer>
 </template>
 
-<style lang="scss"scoped>
-    @use '../assets/styles/variables' as*;
+<style lang="scss" scoped>
+@use '../assets/styles/variables' as *;
 
+footer {
+    background: url('/img/footer-bg.jpg') no-repeat center center/cover;
 
-// footer
-    footer {
-        
-        background: url('/public/img/footer-bg.jpg') no-repeat center center/cover;
+    .footer-content {
+        background: url('/img/dc-logo-bg.png') no-repeat 90% center /contain;
+    }
+
+    .footer-section h3{
+        margin-top: 5px;
+    }
 
     .footer-top {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-evenly;
+        align-items: center;
         padding: 20px 0;
-    }
-
-    .footer-content{
-        background: url(),url('/public/img/dc-logo-bg.png') no-repeat 90% center /contain;
+        
     }
 
     .footer-column {
-        width: 20%;
-     
-        margin-right: -80px;
-       
+        margin-right: 20px;
+        margin-bottom: 10px;
+        min-width: 180px; 
     }
 
     .footer-column h3 {
         font-size: 14px;
         margin-bottom: 10px;
-        
     }
+
 
     .footer-column ul {
         list-style: none;
         font-size: 10px;
         padding: 0;
-     
-    }
-
-    .footer-column h3, ul li {
-        margin-bottom: 5px;
-       margin-left: 160px;
         
     }
 
@@ -158,23 +148,13 @@ export default{
         color: #959595;
         text-decoration: none;
         transition: color 0.3s;
-        
+      
     }
 
     .footer-column ul li a:hover {
         color: #1e90ff;
     }
 
-    .dc-comics-shop {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .dc-comics-shop .footer-section {
-        margin-bottom: 20px;
-    }
-
-    // FOOTERBOTTOM
     .footer-bottom {
         display: flex;
         justify-content: space-around;
@@ -183,12 +163,10 @@ export default{
         background-color: #303030;
     }
 
-    // generali bottone
     .signup-button {
-        background-color:  #303030;
+        background-color: #303030;
         color: white;
         padding: 10px 10px;
-        margin-right: 13rem;
         border: solid 1px #0282F9;
         font-size: 10px;
         cursor: pointer;
@@ -199,12 +177,9 @@ export default{
         background-color: #0c5a99;
     }
 
-
-    // sezione icone
     .social-icons {
         display: flex;
         align-items: center;
-        
     }
 
     .social-icons a {
@@ -216,12 +191,54 @@ export default{
         height: 24px;
     }
 
-    
-    .followus{
+    .followus {
         margin-right: 1rem;
         color: #0282F9;
-       
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 800px) {
+        .footer-top {
+            display: flex;
+           
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center; 
+        }
+
+        .footer-column {
+            margin-bottom: 20px;
+            justify-content: space-evenly;
+        }
+
+
+        .footer-bottom {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 10px;
+        }
+
+        .signup-button {
+         margin-bottom: 1rem;
+    }
+
+    }
+
+    @media (max-width: 400px) {
+    .footer-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center; 
+    }
+
+    .footer-column {
+        flex: 0 0 100%; 
+        margin-bottom: 20px;
     }
 }
+}
+
 
 </style>
