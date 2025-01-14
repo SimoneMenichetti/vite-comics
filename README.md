@@ -1,4 +1,4 @@
-Un'applicazione per la visualizzazione di fumetti, dove gli utenti possono navigare tra diverse serie e tipi di fumetti. Ogni fumetto è rappresentato da una card con un'immagine di copertura, il prezzo, e il tipo di fumetto.
+Un'applicazione per la visualizzazione di fumetti, dove gli utenti possono navigare tra diverse serie di prodotti. Ogni fumetto è rappresentato da una card con un'immagine di copertura, il prezzo, e il tipo di comix.
 
 Funzionalità
 Visualizzazione delle card: Ogni card rappresenta un fumetto e contiene:
