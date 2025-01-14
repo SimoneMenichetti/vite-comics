@@ -7,7 +7,7 @@
 }
 
 img {
-    max-width: 100%;  /* Assicura che le immagini non escano dal contenitore */
+    max-width: 100%;  
 }
 
 /* Link default */
@@ -23,33 +23,38 @@ a {
     padding: 0 1rem;
 }
 
-/* Media queries for responsiveness */
+// regole generali mediaqueries
+
+
+/* Desktop */
 @media (max-width: 1200px) {
     .container {
         padding: 0 2rem;
     }
 }
 
+
+// regole media per tablet
 @media (max-width: 768px) {
     .container {
         padding: 0 1rem;
     }
 
-    /* Card layout for smaller screens */
+    
     .card {
         width: 100%;
-        max-width: 320px; /* Max width for cards */
-        margin: 0 auto;   /* Centra la card */
+        max-width: 320px; 
+        margin: 0 auto;   
     }
 
-    /* Navbar adjustments if you have it */
+    /// navbar
     .navbar {
         align-items: center;
     }
 
   
 
-    /* AppFeatures adjustments */
+    // regole per AppFeatures
     .features {
         padding: 20px 10px;
         justify-content: center;
@@ -57,18 +62,18 @@ a {
     }
 
     .feature {
-        width: 100%; /* Ogni feature occupa tutta la larghezza */
+        width: 100%; 
         justify-content: center;
         text-align: center;
-        margin-bottom: 20px; /* Spaziatura tra le features */
+        margin-bottom: 20px; 
     }
 
     .feature img {
-        width: 40px; /* Aumenta le dimensioni dell'immagine per schermi piccoli */
+        width: 40px; 
         height: 40px;
     }
 
-    /* Footer adjustments */
+    /* Footer  */
     .footer-top {
         align-items: center;
     }
@@ -106,7 +111,7 @@ a {
     }
 }
 
-/* Media query for screens 400px and smaller (e.g., very small smartphones) */
+/* Media query per smartphone 400px a (e.g., very small smartphones) */
 @media (max-width: 400px) {
 
     /* Container */
@@ -114,7 +119,7 @@ a {
         padding: 0 0.5rem; 
     }
 
-    /* AppFeatures adjustments */
+    /* AppFeatures  */
     .features {
         padding: 15px 5px; 
         justify-content: center;
@@ -125,7 +130,7 @@ a {
         width: 100%;  
         justify-content: center;
         text-align: center;
-        margin-bottom: 15px; /* Spaziatura tra le features */
+        margin-bottom: 15px; 
     }
 
     .feature img {
@@ -133,7 +138,7 @@ a {
         height: 35px;
     }
 
-    /* Footer adjustments */
+    /* Footer  */
     .footer-column h3 {
         font-size: 14px;  
     }
@@ -146,6 +151,7 @@ a {
         align-items: center;
         padding: 10px;
     }
+    // regola bottone
 
     .signup-button {
         width: 100%; 
@@ -154,6 +160,7 @@ a {
         margin-bottom: 10px;
     }
 
+    // regole social icons
     .social-icons {
         flex-direction: row; 
         justify-content: center;

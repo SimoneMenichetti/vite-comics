@@ -1,0 +1,36 @@
+{
+    "navLinks": [
+      { "href": "#", "text": "CHARACTERS" },
+      { "href": "#", "text": "COMICS" },
+      { "href": "#", "text": "MOVIES" },
+      { "href": "#", "text": "TV" },
+      { "href": "#", "text": "GAMES" },
+      { "href": "#", "text": "COLLECTIBLES" },
+      { "href": "#", "text": "VIDEOS" },
+      { "href": "#", "text": "FANS" },
+      { "href": "#", "text": "NEWS" },
+      { "href": "#", "text": "SHOP" }
+    ],
+    "footerSections": [
+      {
+        "title": "DC COMICS",
+        "items": [
+          { "label": "Characters", "url": "#" },
+          { "label": "Comics", "url": "#" },
+          { "label": "Movies", "url": "#" },
+          { "label": "TV", "url": "#" },
+          { "label": "Games", "url": "#" },
+          { "label": "Videos", "url": "#" },
+          { "label": "News", "url": "#" }
+        ]
+      },
+      {
+        "title": "SHOP",
+        "items": [
+          { "label": "Shop DC", "url": "#" },
+          { "label": "Shop DC Collectibles", "url": "#" }
+        ]
+      }
+    ]
+  }
+  

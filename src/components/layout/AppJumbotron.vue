@@ -1,6 +1,6 @@
 <script>
 export default{
-    name:'AppJumbotron',
+    name:'AppJumbotron', // nome del componente principale
     data() {
         return {
             // jumboHeroes:{
@@ -21,7 +21,7 @@ export default{
     </div>
 </template>
 <style lang="scss"scoped>
-@use '../assets/styles/variables';
+@use "../../assets/styles/variables" as *;
 .jumboHeroes {
     position: relative;
     background-image: url('/public/img/jumbotron.jpg'); 

@@ -1,9 +1,10 @@
 
 <script>
 export default {
-    name: 'AppFooter',
+    name: 'AppFooter', //nome componente principale 
     data() {
         return {
+            // collezione dei titoli di coda per footer DC Comics , SHOP, Social Icons
             footerSections: [
                 {
                     title: 'DC COMICS',
@@ -64,9 +65,11 @@ export default {
 </script>
 
 <template>
+    <!-- contenitore principale footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-top">
+            <!-- contenitore colonne parte alta del footer -->
                 <div class="footer-column dc-comics-shop">
                     <div class="footer-section">
                         <h3>{{ footerSections[0].title }}</h3>
@@ -88,6 +91,7 @@ export default {
                     </ul>
                 </div>
             </div>
+            <!-- contenitore footer parte bassa Icona e Sign uP -->
             <div class="footer-bottom">
                 <div class="footer-middle">
                     <button class="signup-button">SIGN-UP NOW!</button>
@@ -104,7 +108,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/styles/variables' as *;
+@use "../../assets/styles/variables" as *;
+
+
+// regole generali footer 
 
 footer {
     background: url('/img/footer-bg.jpg') no-repeat center center/cover;
@@ -120,10 +127,11 @@ footer {
     .footer-top {
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
         padding: 20px 0;
         
     }
+
+    // regole colonne Footer parte alta
 
     .footer-column {
         margin-right: 20px;
@@ -154,6 +162,8 @@ footer {
     .footer-column ul li a:hover {
         color: #1e90ff;
     }
+
+    // regole generali footer parte bassa
 
     .footer-bottom {
         display: flex;
@@ -196,7 +206,7 @@ footer {
         color: #0282F9;
     }
 
-    /* Responsive adjustments */
+    /* Responsive media dispositivi tablet*/
     @media (max-width: 800px) {
         .footer-top {
             display: flex;
@@ -223,6 +233,8 @@ footer {
     }
 
     }
+
+    // responsive media per dispositivi piccoli smartphone
 
     @media (max-width: 400px) {
     .footer-top {

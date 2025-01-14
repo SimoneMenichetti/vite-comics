@@ -1,57 +1,46 @@
 <script>
-export default {
-  name: "AppHeader",
-  data() {
-    return {
-      activeLink: "",
-      menuVisible: false, // Stato per gestire la visibilità del menu a discesa
-      logo: {
-        href: "/",
-        src: "/public/img/dc-logo.png",
-        alt: "logo png"
-      },
-      navLinksData: [
-        { href: "#", text: "CHARACTERS" },
-        { href: "#", text: "COMICS" },
-        { href: "#", text: "MOVIES" },
-        { href: "#", text: "TV" },
-        { href: "#", text: "GAMES" },
-        { href: "#", text: "COLLECTIBLES" },
-        { href: "#", text: "VIDEOS" },
-        { href: "#", text: "FANS" },
-        { href: "#", text: "NEWS" },
-        { href: "#", text: "SHOP" }
-      ]
-    };
-  },
-
-  methods: {
-    setActiveLink(linkText) {
-      this.activeLink = linkText;
+  // Questo componente rappresenta l'header dell'applicazione con un menu di navigazione principale.
+  // Include una gestione per il menu a discesa (hamburger menu) per dispositivi mobili.
+  import menuLinks from "../../data/menuLinks.json";
+  export default {
+    name: "AppHeader",
+    data() {
+      return {
+        activeLink: "",
+        menuVisible: false,
+        logo: {
+          href: "/",
+          src: "/public/img/dc-logo.png",
+          alt: "logo png",
+        },
+        navLinksData: menuLinks.navLinks, // Importa i dati da menuLinks.json
+      };
     },
-    toggleMenu() {
-      this.menuVisible = !this.menuVisible; // Alterna la visibilità del menu
-    }
-  }
-};
+    methods: {
+      setActiveLink(linkText) {
+        this.activeLink = linkText;
+      },
+      toggleMenu() {
+        this.menuVisible = !this.menuVisible;
+      },
+    },
+  };
 </script>
 
 <template>
   <header>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
       <div class="logo">
         <a :href="logo.href" class="brand">
           <img :src="logo.src" :alt="logo.alt" />
         </a>
       </div>
-      <!-- Icona hamburger per dispositivi mobili -->
-      <div class="hamburger" @click="toggleMenu">
+      <div class="hamburger" @click="toggleMenu" aria-label="Toggle menu" role="button" tabindex="0">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
-      <!-- Menu a discesa che si attiva al click sull'icona hamburger -->
-      <ul class="nav-links" :class="{ 'menu-visible': menuVisible }">
+      <ul class="nav-links" :class="{ 'menu-visible': menuVisible }" aria-hidden="!menuVisible">
         <li v-for="link in navLinksData" :key="link.text">
           <a
             :href="link.href"
@@ -66,10 +55,12 @@ export default {
   </header>
 </template>
 
-<style lang="scss" scoped>
-@use "../assets/styles/variables" as *;
-@use "../assets/styles/mixins" as *;
 
+<style lang="scss" scoped>
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+// regole generali header con uso dei mixins
 header {
   .navbar {
     @include center("around");
@@ -77,22 +68,21 @@ header {
     position: relative;
   }
 
+  // regole logo
   .logo img {
     height: 60px;
     margin-left: 1rem;
   }
 
+  // regole link navbar
   .nav-links {
     @include center();
     list-style: none;
     margin-right: 8rem;
-    display: flex;
     gap: 1rem;
   }
 
   .nav-links a {
-    text-decoration: none;
-    color: black;
     font-weight: bold;
     position: relative;
     padding-bottom: 5px;
@@ -100,9 +90,7 @@ header {
 
   li a {
     padding: 1rem;
-    text-decoration: none;
     font-size: 14px;
-    font-weight: bold;
   }
 
   .nav-links a:hover,
@@ -115,7 +103,7 @@ header {
     content: "";
     position: absolute;
     width: 60%;
-    height: 2px;
+    height: 4px;
     background-color: #0282f9;
     bottom: -96%;
     left: 20%;
@@ -159,7 +147,7 @@ header {
     font-size: 16px;
   }
 
-  /* Responsive adjustments */
+  /* Responsive modalità desktop */
   @media (max-width: 1024px) { /* Include tablet screen sizes */
     .navbar {
       align-items: center;
@@ -169,15 +157,17 @@ header {
       margin-left: 20px;
     }
 
+     /* Nascondi il menu di default su mobile e tablet */
     .nav-links {
-      display: none; /* Nascondi il menu di default su mobile e tablet */
+      display: none;
       flex-direction: column;
       margin-right: 0;
       gap: 0;
     }
 
+    /* Mostra l'icona hamburger per mobile e tablet */
     .hamburger {
-      display: flex; /* Mostra l'icona hamburger per mobile e tablet */
+      display: flex; 
     }
   }
 }

@@ -1,6 +1,7 @@
 <script>
+
 export default{
-    name:"AppCard",
+    name:"AppCard",// nome componente principale 
     props: {
         details: Object
     }
@@ -8,6 +9,7 @@ export default{
 </script>
 
 <template>
+    <!-- sezione card -->
     <section>
         <div class="card">
             <img :src="details.thumb" alt="">
@@ -17,7 +19,10 @@ export default{
 </template>
 
 <style scoped lang="scss">
-@use '../assets/styles/variables' as*;
+@use "../../assets/styles/variables" as *;
+
+
+// regole generali cards
 
 .card {
     width: 150px;
@@ -53,7 +58,9 @@ export default{
     }
 }
 
-/* Tablet-sized screens (max-width 768px) */
+// regole generali responsive
+
+/* Tablet (max-width 768px) */
 @media (max-width: 768px) {
     .card {
         width: 100%;
@@ -61,7 +68,7 @@ export default{
     }
 }
 
-/* For mobile (e.g., 400px) */
+/* smartphone (e.g., 400px) */
 @media (max-width: 400px) {
     .card {
         width: 100%;
