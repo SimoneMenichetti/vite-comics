@@ -50,33 +50,36 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/styles/variables';
 
-// Stili per la sezione delle features
 .features {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    text-align: center;
+    gap: 5rem;
     align-items: center;
     background-color: #0282F9;
     padding: 30px 10px;
     cursor: pointer;
-    flex-wrap: wrap;
+    
 
     .feature {
         display: flex;
+        flex-direction: column;  
         align-items: center; 
-        justify-content: center; 
+        text-align: center;
         color: #fff;
         font-size: 14px;
-        
-    }
-
-    .feature p {
-        margin-right: 1rem; 
+        margin: 10px;
     }
 
     .feature img {
         width: 25px;
         height: 25px;
-        margin-right: 0.5rem; 
+        margin-bottom: 0.5rem;  // Separare l'immagine dal testo
+    }
+
+    .feature p {
+        margin: 0;
+        font-size: 12px;  // Impostato un font più piccolo se necessario
     }
 }
 
@@ -85,32 +88,37 @@ export default {
 /* Tablet (max-width 768px) */
 @media (max-width: 768px) {
     .features {
-        padding: 30px 10px;
-        justify-content: space-around;
-        
+        padding: 20px 10px;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem;
        
     }
-
-   
+    .feature {
+        flex-direction: row; 
+        align-items: center;  
+    }
 }
 
 /* per smartphone (e.g., 400px) */
 @media (max-width: 400px) {
     .features {
         padding: 20px 10px;
-        justify-content: space-between;
-        
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem;
+       
     }
 
     .feature img {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
 
     .feature p {
-        font-size: 0.5rem;
+        font-size: 0.8rem;  
     }
-
-    
 }
 </style>

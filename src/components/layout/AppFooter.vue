@@ -134,7 +134,7 @@ footer {
     // regole colonne Footer parte alta
 
     .footer-column {
-        margin-right: 20px;
+        
         margin-bottom: 10px;
         min-width: 180px; 
     }
@@ -210,8 +210,6 @@ footer {
     @media (max-width: 800px) {
         .footer-top {
             display: flex;
-           
-            align-items: center;
             flex-wrap: wrap;
             text-align: center; 
         }
@@ -246,7 +244,7 @@ footer {
     }
 
     .footer-column {
-        flex: 0 0 100%; 
+        
         margin-bottom: 20px;
     }
 }
