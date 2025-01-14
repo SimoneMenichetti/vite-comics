@@ -32,7 +32,8 @@ Copia codice
 
 bash
 Copia codice
-git clone https://github.com/tuo-username/comic-book-app.git 2. Installa le dipendenze
+git clone https://github.com/tuo-username/comic-book-app.git 
+2. Installa le dipendenze
 Naviga nella cartella del progetto e installa le dipendenze tramite npm:
 
 bash
@@ -46,7 +47,8 @@ Copia codice
 npm run serve
 L'applicazione sarà disponibile su http://localhost:8080.
 
-Struttura del componente principale (AppMain.vue)
+Struttura del componente principale 
+(AppMain.vue)
 Il componente principale AppMain.vue gestisce l'elenco delle card dei fumetti e visualizza il layout delle card. Include il componente AppCard per ogni fumetto.
 
 Dati dei fumetti
